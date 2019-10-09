@@ -1,0 +1,146 @@
+IF
+	See(NearestEnemyOf(Myself))
+	Global("prep","LOCALS",0)
+THEN
+	RESPONSE #100
+		ApplySpell(Myself,CLERIC_ARMOR_OF_FAITH)
+		ApplySpell(Myself,CLERIC_IRONSKIN)
+		ApplySpell(Myself,CLERIC_RESIST_FIRE)
+		ApplySpell(Myself,CLERIC_BARKSKIN)
+		SetGlobal("prep","LOCALS",1)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HasItem("heartwod",Myself)
+	Global("summon","LOCALS",0)
+THEN
+	RESPONSE #100
+		UseItem("heartwod",NearestEnemyOf(Myself))
+		SetGlobal("summon","LOCALS",1)
+		Continue()
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HaveSpell(CLERIC_CHANT)
+THEN
+	RESPONSE #100
+		Spell(Myself,CLERIC_CHANT)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	See(NearestMyGroupOfType)
+	HaveSpell(CLERIC_MASS_CURE)
+	HPPercentLT(Myself,80)
+	OR(3)
+	HPPercentLT(LastSeenBy(Myself),80)
+	HPPercentLT(SecondNearestMyGroupOfType,80)
+	HPPercentLT(ThirdNearestMyGroupOfType,80)
+THEN
+	RESPONSE #100
+		Spell(LastSeenBy(Myself),CLERIC_MASS_CURE)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HaveSpell(CLERIC_DEFENSIVE_HARMONY)
+THEN
+	RESPONSE #100
+		Spell(Myself,CLERIC_DEFENSIVE_HARMONY)
+END
+
+IF
+	Allegiance(Myself,ENEMY)
+	Detect([PC])
+	!See(LastSeenBy(Myself))
+	HaveSpell(CLERIC_INVISIBILITY_PURGE)
+THEN
+	RESPONSE #100
+		Spell(Myself,CLERIC_INVISIBILITY_PURGE)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HaveSpell(CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		Spell(LastSeenBy(Myself),CLERIC_INSECT_PLAGUE)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HaveSpell(CLERIC_CALL_LIGHTNING)
+THEN
+	RESPONSE #100
+		Spell(LastSeenBy(Myself),CLERIC_CALL_LIGHTNING)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HaveSpell(CLERIC_ANIMAL_SUMMONING_2)
+THEN
+	RESPONSE #100
+		Spell(LastSeenBy(Myself),CLERIC_ANIMAL_SUMMONING_2)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HaveSpell(CLERIC_SUMMON_INSECTS)
+THEN
+	RESPONSE #100
+		Spell(LastSeenBy(Myself),CLERIC_SUMMON_INSECTS)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HaveSpell(CLERIC_CALL_WOODLAND_BEINGS)
+THEN
+	RESPONSE #100
+		Spell(LastSeenBy(Myself),CLERIC_CALL_WOODLAND_BEINGS)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HaveSpell(CLERIC_CHARM_PERSON)
+THEN
+	RESPONSE #100
+		Spell(LastSeenBy(Myself),CLERIC_CHARM_PERSON)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	See(NearestMyGroupOfType)
+	HPPercentLT(LastSeenBy(Myself),60)
+	HaveSpell(CLERIC_CURE_SERIOUS_WOUNDS)
+THEN
+	RESPONSE #100
+		Spell(LastSeenBy(Myself),CLERIC_CURE_SERIOUS_WOUNDS)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	!Range(LastSeenBy(Myself),4)
+	HPPercentLT(Myself,60)
+	HaveSpell(CLERIC_CURE_SERIOUS_WOUNDS)
+THEN
+	RESPONSE #100
+		Spell(Myself,CLERIC_CURE_SERIOUS_WOUNDS)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HaveSpell(CLERIC_FLAME_BLADE)
+THEN
+	RESPONSE #100
+		Spell(Myself,CLERIC_FLAME_BLADE)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		AttackReevaluate(NearestEnemyOf(Myself),15)
+END
+

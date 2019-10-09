@@ -1,0 +1,19 @@
+IF
+	See(NearestEnemyOf(Myself))
+	!Range(NearestEnemyOf(Myself),3)
+	Global("teleport","LOCALS",0)
+THEN
+	RESPONSE #100
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_DIMENSION_DOOR)
+		SetGlobal("teleport","LOCALS",1)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	Global("teleport","LOCALS",1)
+THEN
+	RESPONSE #100
+		AttackOneRound(NearestEnemyOf(Myself))
+		AttackOneRound(NearestEnemyOf(Myself))
+		SetGlobal("teleport","LOCALS",0)
+END
