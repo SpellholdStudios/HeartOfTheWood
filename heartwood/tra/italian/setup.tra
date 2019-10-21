@@ -1,0 +1,35 @@
+@0 = ~Il Cuore della Foresta~
+@2 = ~Alabarda~
+@3 = ~Pugno~
+@4 = ~Ramo~
+@5 = ~Questo piccolo pezzo di quercia ti trasmette la strana sensazione che sia di più di un semplice ramo.~
+@6 = ~Questo ramo magico è conosciuto per essere stato, molto tempo fa, parte di un grande albero situato nel territorio di un'antica popolazione elfica. Benché siano passati molti secoli il ramo ancora possiede grandi poteri. Si dice che nelle giuste mani il possessore può liberare il potere della natura sui suoi nemici.
+
+Abilità Speciali:
+Evoca creature della Foresta/Mostri con massimo 13 dadi vita per 3 turni una volta al giorno
+Peso: 4
+Utilizzabile da: Druidi~
+@8  = ~Evocare Creature dei Boschi~
+
+//@8 = ~<No Text>~
+@9 = ~Attivata Trappola con Ragnatela che intralcia dell'Ettercap~
+@10 = ~Piazzare Trappola di Ragnatela che intralcia dell'Ettercap~
+
+@12 = ~Ankheg~
+@13 = ~Boalisk~
+@14 = ~Vermeiena~
+@15 = ~Cath Shee~
+@16 = ~Ettercap~
+@17 = ~Firbolg~
+@18 = ~Ninfa~
+@19 = ~Gibberling Aggressivo~
+@20 = ~Kyland Lind~
+@21 = ~Troll della Foresta~
+@22 = ~Viverna~
+
+@100 = ~Il Cuore della Foresta (versione WeiDU)~
+@101 = ~Questo componente non e disponibile per il tuo gioco.~
+
+@9001 =~[Uu]tilizzabile[ %tab%]+[Da]a[ %tab%]*:~
+@9002 =~[Nn]on[ %tab%]+[Uu]tilizzabile[ %tab%]+[Da]a[ %tab%]*:~
+
