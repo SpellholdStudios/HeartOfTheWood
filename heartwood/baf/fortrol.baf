@@ -1,6 +1,5 @@
 IF
 	OnCreation()
-
 THEN
 	RESPONSE #100
 		PlayDead(600)
