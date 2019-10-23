@@ -10,12 +10,14 @@ $RECYCLE.BIN/
 
 
 *.bak
+*.bat
 *.csv
 *.7z
 *.rar
 *.zip
 dev_notes.txt
 z*.*
+todo*.*
 
 # Windows Installer files
 
