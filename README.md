@@ -1,7 +1,7 @@
 
-![Latest Release](https://img.shields.io/static/v1?label=release&message=v6.0.0&color=darkred)<a name="top" id="top">
+![Latest Release](https://img.shields.io/static/v1?label=release&message=v7.0.0&color=darkred)<a name="top" id="top">
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows&color=informational)
-![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20Italian%20%7C%20Russian&color=limegreen)
+![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20German%20%7C%20Italian%20%7C%20Russian&color=limegreen)
 
 <div align="center"><h1></a>Heart of the Wood (WIP)</h1>
 
@@ -99,8 +99,9 @@ The installer includes one single component, the main component.
 
 - Gwendolyne: Fixed translations and released version 6.0.0.
 - Deratiseur: Provided French translation, the EE compatible version and released version 5.
-- Ilot: Provided Italian translation
-- aerie.ru team: Provided Russian translation
+- Cronox: Provided German translation.
+- Ilot: Provided Italian translation.
+- aerie.ru team: Provided Russian translation.
 
 If you wish to translate the mod, have a suggestion, or should encounter any bugs, please report them to the maintainers at the <a href="http://www.shsforums.net/topic/7781-heart-of-the-wood/">mod forum</a>.</br>
 
@@ -118,7 +119,7 @@ If you wish to translate the mod, have a suggestion, or should encounter any bug
 
 ## <a name="versions" id="versions"></a>Versions History
 
-##### Version 6.0.0
+##### Version 7.0.0
 
 - Renamed Setup-HeartWood.tp2 -> heartwood.tp2 to support AL|EN's "Project Infinity".
 - Added heartwood.ini metadata file to support AL|EN's "Project Infinity".
@@ -131,23 +132,45 @@ If you wish to translate the mod, have a suggestion, or should encounter any bug
 - Added REQUIRE_PREDICATE process to avoid installing the mod in inaccurate games.
 - Removed AT_INTERACTIVE_EXIT deprecated command replaced with README.
 - Replaced AUTHOR keyword with SUPPORT.
-- Re-added version flag.
-- Updated Russian and Italian tra files for compatibility with GW_UPDATE_ITM_DESCRIPTION_TO_EE WeiDU function requirements which automatically removes usability restrictions for EE games.
+- Restored version flag.
+- Updated German, Italian and Russian tra files for compatibility with GW_UPDATE_ITM_DESCRIPTION_TO_EE WeiDU function requirements which automatically removes usability restrictions for EE games.
 - Split, updated and renamed readme files to heartwood-readme-%LANGUAGE%.
 - Updated French and English translations (Gwendolyne).
+- Restored German translation (Cronox).
 
 ## 
 
-##### Version 5
+##### Version 5 (, ) : wrong version number
 
 - Added BG2EE compatibility by Deratiseur.
 - Updated WeiDU installer to v246.
 
 ## 
 
-##### Version 4
+##### Version 6 (April 10, 2009)
+- Zeroed effects offset in [HeartWood\Creatures\ankhgsum.cre]
+  Zeroed effects offset in [HeartWood\Creatures\boalksum.cre]
+  Zeroed effects offset in [HeartWood\Creatures\carcrsum.cre]
+  Zeroed effects offset in [HeartWood\Creatures\cathsesu.cre]
+  Zeroed effects offset in [HeartWood\Creatures\ettersum.cre]
+  Zeroed effects offset in [HeartWood\Creatures\nymphsum.cre]
+  Zeroed effects offset in [HeartWood\Creatures\sumonsum.cre]
+  Zeroed effects offset in [HeartWood\Creatures\tdr10a.cre]
+  Zeroed effects offset in [HeartWood\Creatures\trolfo02.cre]
+  Zeroed effects offset in [HeartWood\Creatures\trolfosu.cre]
+  Zeroed effects offset in [HeartWood\Creatures\wyversum.cre]
+- Added VERSION flag.
+- Updated WeiDU installer to v210.
+
+##### Version 5 (May 14, 2008)
 
 - Added French translation by Deratiseur.
+
+## 
+
+##### Version 4 (April 13, 2008)
+
+- Added German translation by Cronox (thank you!!!).
 
 ## 
 
@@ -157,7 +180,7 @@ If you wish to translate the mod, have a suggestion, or should encounter any bug
 
 ## 
 
-##### Version 2
+##### Version 2 (June 3, 2006)
 
 - Added Russian translation by www.aerie.ru.
 - WeiDU conversion by Badgert.
