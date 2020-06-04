@@ -1,12 +1,13 @@
-@9001 = ~[Uu]sable[ %tab%]+[Bb]y[ %tab%]*:~
-@9002 = ~\(Not[ %tab%]+\|Un\)[Uu]sable[ %tab%]+[Bb]y[ %tab%]*:~
+/* ------- *
+ *  Items  *
+ * ------- */
+@1    = ~Halberd~
+@2    = ~Fist~
 
-@0 = ~Heart of the Wood~
-@2 = ~Halberd~
-@3 = ~Fist~
-@4 = ~Branch~
-@5 = ~This small piece of common oak wood gives you the strange feeling being more than a mere branch.~
-@6 = ~This magic branch is known to have been once part of a world tree in a distant elven tribe. Although many centuries had passed over it the branch still owns great powers. It is said that in the right hands the owner can unleash nature's power at his/her foes.
+@3    = ~Branch~
+@4    = ~Heart of the Wood~
+@5    = ~This small piece of common oak wood gives you the strange feeling being more than a mere branch.~
+@6    = ~This magic branch is known to have been once part of a world tree in a distant elven tribe. Although many centuries had passed over it the branch still owns great powers. It is said that in the right hands the owner can unleash nature's power at his/her foes.
 
 STATISTICS:
 
@@ -14,25 +15,42 @@ Charge abilities:
 - Summons max. 13 HD of woodland creatures/monsters for 3 turns once per day.
 
 Weight: 4
+
 Usable By:
  Druid~
-@8 = ~Summon Woodland Beings~
+@7    = ~Summon Woodland Beings~
 
-//@8 = ~<No Text>~
-@9 = ~Ettercap Web Tangle~
-@10 = ~Set Web Trap~
+/* -------- *
+ *  Spells  *
+ * -------- */
+//@8    = ~<No Text>~
+@9    = ~Ettercap Web Tangle~
+@10   = ~Set Web Trap~
 
-@12 = ~Ankheg~
-@13 = ~Boalisk~
-@14 = ~Carrion Crawler~
-@15 = ~Cath Shee~
-@16 = ~Ettercap~
-@17 = ~Firbolg~
-@18 = ~Nymph~
-@19 = ~Su-monster~
-@20 = ~Kyland Lind~
-@21 = ~Forest Troll~
-@22 = ~Wyvern~
+/* ----------- *
+ *  Creatures  *
+ * ----------- */
+@12   = ~Ankheg~
+@13   = ~Boalisk~
+@14   = ~Carrion Crawler~
+@15   = ~Cath Shee~
+@16   = ~Ettercap~
+@17   = ~Firbolg~
+@18   = ~Nymph~
+@19   = ~Su-monster~
+@20   = ~Kyland Lind~
+@21   = ~Forest Troll~
+@22   = ~Wyvern~
 
-@100 = ~Heart of the Wood (WeiDU version)~
-@101 = ~This component is not available for your game.~
+/* --------------- *
+ *  WeiDU Install  *
+ * --------------- */
+@100  = ~Heart of the Wood (WeiDU version)~
+@101  = ~This mod is not available for your game.~
+
+
+/* ================= *
+ *  Usability flags  *
+ * ================= */
+@9001 = ~[Uu]sable[ %tab%]+[Bb]y[ %tab%]*:~
+@9002 = ~\(Not[ %tab%]+\|Un\)[Uu]sable[ %tab%]+[Bb]y[ %tab%]*:~
