@@ -2,7 +2,7 @@ BACKUP ~heartwood/backup~
 //AUTHOR ~TIN~
 SUPPORT ~http://www.shsforums.net/topic/7781-heart-of-the-wood/~
 
-VERSION ~6.0.0~
+VERSION ~7.0.0~
 
 README ~heartwood/readme/heartwood-readme-%LANGUAGE%.txt~ ~heartwood/readme/heartwood-readme-english.txt~
 
