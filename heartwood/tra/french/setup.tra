@@ -31,7 +31,7 @@ Utilisable par :
  *  Creatures  *
  * ----------- */
 @12   = ~Ankheg~
-@13   = ~Boasilic~ Boalisk
+@13   = ~Boasilic~ //Boalisk
 @14   = ~Ver charognard~
 @15   = ~Grand chat fée~
 @16   = ~Ettercap~
