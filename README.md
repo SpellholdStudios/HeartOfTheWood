@@ -3,7 +3,7 @@
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20Mac%20%7C%20linux&color=informational)
 ![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20German%20%7C%20Italian%20%7C%20Russian&color=limegreen)
 
-<div align="center"><h1></a>Heart of the Wood (WIP)</h1>
+<div align="center"><h1></a>Heart of the Wood</h1>
 
 <h3>A mod hosted by Spellhold Studios for Baldur's Gate II: Throne of Bhaal (classical and EE games),
 Baldur's Gate Trilogy and EET<h3>
