@@ -1,0 +1,165 @@
+BACKUP ~heartwood/backup~
+//AUTHOR ~TIN~
+SUPPORT ~http://www.shsforums.net/topic/7781-heart-of-the-wood/~
+
+VERSION ~6.0.0~
+
+README ~heartwood/readme/heartwood-readme-%LANGUAGE%.txt~ ~heartwood/readme/heartwood-readme-english.txt~
+
+
+ALWAYS
+
+	/* Converts tra files to UTF-8 */
+	ACTION_DEFINE_ARRAY hotw_reload BEGIN setup END
+	ACTION_DEFINE_ARRAY hotw_noconvert BEGIN END
+	LAF HANDLE_CHARSETS
+		INT_VAR
+			infer_charsets = 1
+		STR_VAR
+			tra_path = EVAL ~%MOD_FOLDER%/tra~
+			noconvert_array = hotw_noconvert
+			reload_array = hotw_reload
+	END
+
+	/* Loads in any shared functions library (general macros and functions) */
+	INCLUDE ~heartwood/lib/gw_functions.tpa~	// Loads macros and functions library dealing with tooltip appending and specific EE items descriptions.
+
+	LAM ~GW_READ_COL_TOOLTIP~					// Reads how many columns are in tooltip.2da file.
+
+END
+
+AUTO_TRA ~heartwood/tra/%s~
+
+LANGUAGE ~English~
+		 ~english~
+         ~heartwood/tra/english/setup.tra~
+
+LANGUAGE ~Russian (translation by aerie.ru)~
+		 ~russian~
+         ~heartwood/tra/russian/setup.tra~
+
+LANGUAGE ~Italiano (traduzione di ilot)~
+		 ~italian~
+         ~heartwood/tra/italian/setup.tra~
+
+LANGUAGE ~Deutsch (Uebersetzung von Cronox)~
+		 ~german~
+         ~heartwood/tra//german/setup.tra~
+
+LANGUAGE ~Francais (traduction : Deratiseur)~
+		 ~french~
+         ~heartwood/tra/french/setup.tra~
+
+
+/* ================================== *
+ *         Heart of the Wood          *
+ * ================================== */
+BEGIN @100
+DESIGNATED 0 LABEL "heart_of_the_wood"
+REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @101	// ~This mod is not available for your game.~
+
+/* ------- *
+ *  Items  *
+ * ------- */
+COPY ~heartwood/items/firbolg1.itm~ ~override~
+	SAY NAME1 @1
+	SAY NAME2 @1
+
+COPY ~heartwood/items/firbolg2.itm~ ~override~
+	SAY NAME2 @1
+	SAY NAME2 @2
+
+COPY ~heartwood/items/heartwod.itm~ ~override~
+	SAY NAME1 @3
+	SAY NAME2 @4
+	SAY UNIDENTIFIED_DESC @5
+	LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@6" END
+BUT_ONLY
+LAF ~GW_ADD_ITEM_TOOLTIPS~ STR_VAR GW_objet = ~heartwod~ GW_tooltips = ~@7~ END	// Summon Woodland Beings once per day
+
+/* -------- *
+ *  Spells  *
+ * -------- */
+COPY ~heartwood/spells/ettertrp.spl~ ~override~
+//	SAY NAME1 @8
+
+// Ettercap Web Tangle
+COPY ~heartwood/spells/etterweb.spl~ ~override~
+	SAY NAME1 @9
+//	SAY UNIDENTIFIED_DESC @8
+
+// Set Web Trap
+COPY ~heartwood/spells/spletter.spl~ ~override~
+	SAY NAME1 @10
+//	SAY UNIDENTIFIED_DESC @8
+
+/* ----------- *
+ *  Creatures  *
+ * ----------- */
+// Ankheg
+COPY ~heartwood/creatures/ankhgsum.cre~ ~override~
+	SAY NAME1 @12
+	SAY NAME2 @12
+
+// Boalisk
+COPY ~heartwood/creatures/boalksum.cre~ ~override~
+	SAY NAME1 @13
+	SAY NAME2 @13
+
+// Carrion Crawler
+COPY ~heartwood/creatures/carcrsum.cre~ ~override~
+	SAY NAME1 @14
+	SAY NAME2 @14
+
+// Cath Shee
+COPY ~heartwood/creatures/cathsesu.cre~ ~override~
+	SAY NAME1 @15
+	SAY NAME2 @15
+
+// Ettercap
+COPY ~heartwood/creatures/ettersum.cre~ ~override~
+	SAY NAME1 @16
+	SAY NAME2 @16
+
+// Firbolg
+COPY ~heartwood/creatures/firbolg.cre~ ~override~
+	SAY NAME1 @17
+	SAY NAME2 @17
+
+// Nymph
+COPY ~heartwood/creatures/nymphsum.cre~ ~override~
+	SAY NAME1 @18
+	SAY NAME2 @18
+
+// Su-monster
+COPY ~heartwood/creatures/sumonsum.cre~ ~override~
+	SAY NAME1 @19
+	SAY NAME2 @19
+
+// Kyland Lind
+//COPY ~heartwood/creatures/tdr10a.cre~ ~override~	SAY NAME1 @20	SAY NAME2 @20
+COPY_EXISTING ~tdr10a.cre~ ~override~
+	WRITE_ASCII SCRIPT_RACE ~HEARTWOD~ #8
+	ADD_MEMORIZED_SPELL ~SPPR204~ #1 ~priest~	// Charm Person or Mammal
+	ADD_MEMORIZED_SPELL ~SPPR302~ #2 ~priest~	// Call Lightning
+	ADD_MEMORIZED_SPELL ~SPPR410~ #3 ~priest~	// Call Woodland Beings
+	ADD_MEMORIZED_SPELL ~SPPR501~ #4 ~priest~	// Animal Summoning II
+	ADD_MEMORIZED_SPELL ~SPPR517~ #4 ~priest~	// Insect Plague
+	ADD_CRE_ITEM ~HEARTWOD~ #1 #0 #0 ~NONE~ ~QITEM1~
+
+// Forest Troll
+COPY ~heartwood/creatures/trolfo02.cre~ ~override~
+	 ~heartwood/creatures/trolfosu.cre~ ~override~
+	SAY NAME1 @21
+	SAY NAME2 @21
+
+// Wyvern
+COPY ~heartwood/creatures/wyversum.cre~ ~override~
+	SAY NAME1 @22
+	SAY NAME2 @22
+
+COPY ~heartwood/eff~ ~override~
+
+COMPILE ~heartwood/baf~
+
+// EoF
