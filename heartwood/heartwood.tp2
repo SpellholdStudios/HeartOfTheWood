@@ -50,6 +50,10 @@ LANGUAGE ~Francais (traduction : Deratiseur)~
 		 ~french~
          ~heartwood/tra/french/setup.tra~
 
+LANGUAGE ~Simplified Chinese~
+		 ~schinese~
+         ~heartwood/tra/schinese/setup.tra~
+
 
 /* ================================== *
  *         Heart of the Wood          *
